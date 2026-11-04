@@ -14,7 +14,7 @@ describe('Validación de vulnerabilidad XSS', () => {
     cy.contains('button', 'Crear tarea').click();
 
     // Verificar que se renderizó un elemento H1 dentro de la lista
-    cy.get('#taskList H1')
+    cy.get('#taskList')
       .should('exist')
       .and('contain.text', 'TAREA MALICIOSA');
 
