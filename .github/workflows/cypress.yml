@@ -14,10 +14,13 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Instalar dependencias
         run: npm install
+
+      - name: Instalar binario de Cypress
+        run: npx cypress install
 
       - name: Iniciar aplicación
         run: |
